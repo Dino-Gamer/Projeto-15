@@ -1,5 +1,7 @@
-
-var  gamestate = PLAY
+//PLAY e END
+var PLAY = 0;
+var END = 1;
+var  gameState = PLAY
 
 
 var bow , arrow,  background, redB, pinkB, greenB ,blueB ,arrowGroup;
@@ -46,7 +48,7 @@ function draw() {
  background(0);
 if (gameState === PLAY){
   scene.velocityX = -3 
-}
+
 
 
     if (scene.x < 0){
@@ -84,7 +86,7 @@ if (gameState === PLAY){
 
     gameState=END; 
   }
-
+}
 
  if (gameState === END){
   bow.destroy();
@@ -100,6 +102,7 @@ if (gameState === PLAY){
  
   
   drawSprites();
+  
 text ("score: "+score, 350,50);
 }
 
